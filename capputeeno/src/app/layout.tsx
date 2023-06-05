@@ -1,7 +1,15 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+"use client"
 
-const inter = Inter({ subsets: ['latin'] })
+import { Header } from '@/components/Header'
+import './globals.css'
+import { Saira } from 'next/font/google'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from '@/styles/themes/default'
+
+const saira = Saira({
+  weight: ['300', '400', '500', '600'],
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +22,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <html lang="en">
+          <ThemeProvider theme={defaultTheme}>
+            <Header />
+            <body className={saira.className}>{children}</body>
+          </ThemeProvider>
+      </html>
   )
 }
