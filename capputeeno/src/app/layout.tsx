@@ -5,7 +5,7 @@ import './globals.css'
 import { Saira } from 'next/font/google'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from '@/styles/themes/default'
-import { FilterContextProvider } from '@/contexts/filter-context'
+import { FilterContextProvider } from '@/contexts/filterContext'
 
 const saira = Saira({
   weight: ['300', '400', '500', '600'],
