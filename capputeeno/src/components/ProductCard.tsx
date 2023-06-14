@@ -52,7 +52,7 @@ const Card = styled.div`
             height: 1px;
             margin: 8px 0;
             padding: 0px;
-            background: ${({ theme }) => theme["shapes-2"]};
+            background: ${({ theme }) => theme.colors["shapes-2"]};
         }
     }
 `

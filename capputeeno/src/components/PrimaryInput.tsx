@@ -1,36 +1,45 @@
 "use client"
 
-import { styled } from "styled-components";
+import { styled, useTheme } from "styled-components";
 import { SearchIcon } from "./icons/SearchIcon";
 import { InputHTMLAttributes } from "react";
 
 export const PrimaryInput = styled.input`
-    width: 352px;
+    width: 100%;
     padding: 10px 16px;
     border-radius: 8px;
     border: 0;
-    background-color: ${({ theme }) => theme['bg-secondary']};
+    background-color: ${({ theme }) => theme.colors['bg-secondary']};
 
     font-family: inherit;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: ${({ theme }) => theme['text-dark']};
+    font-size: 12px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.colors['text-dark']};
 
     &::placeholder {
         font-family: inherit;
+    }
+
+    @media (min-width: ${({ theme }) => theme.MediaQueryList.small}) {
+        font-sizeL: 14px;
+        line-height: 22px;
     }
 `
 
 const InputContainer = styled.div`
     position: relative;
-    width: width: 352px;
+    width: 250px;
 
     svg {
         position: absolute;
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    @media (min-width: ${({ theme }) => theme.MediaQueryList.small}) {
+        width: 352px;
     }
 `
 
