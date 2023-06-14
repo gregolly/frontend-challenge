@@ -1,4 +1,4 @@
-export enum FilterTypes {
+export enum FilterType {
     'ALL',
     'SHIRT',
     'MUG'

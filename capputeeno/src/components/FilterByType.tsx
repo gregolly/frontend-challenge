@@ -1,7 +1,7 @@
 "use client"
 
 import { useFilter } from "@/hooks/useFilter"
-import { FilterTypes } from "@/types/FilterTypes"
+import { FilterType } from "@/types/filterTypes"
 import { styled } from "styled-components"
 
 interface FilterItemProps {
@@ -25,7 +25,7 @@ const FilterItem = styled.li<FilterItemProps>`
     text-transform: uppercase;
     cursor: pointer;
 
-    color: ${({ theme }) => theme["text-dark"]};
+    color: ${({ theme }) => theme.colors["text-dark"]};
 
     border-bottom: ${props => props.selected ? '4px solid #FFA585' : ""};
 `
@@ -33,29 +33,29 @@ const FilterItem = styled.li<FilterItemProps>`
 export function FilterByType() {
     const { type, setType } = useFilter()
 
-    function handleChangeType(value: FilterTypes) {
+    function handleChangeType(value: FilterType) {
         setType(value)
     }
 
     return (
         <FilterList>
             <FilterItem 
-                onClick={() => handleChangeType(FilterTypes.ALL)} 
-                selected={type === FilterTypes.ALL}
+                onClick={() => handleChangeType(FilterType.ALL)} 
+                selected={type === FilterType.ALL}
             >
                 Todos os produtos
             </FilterItem>
 
             <FilterItem 
-                onClick={() => handleChangeType(FilterTypes.SHIRT)} 
-                selected={type === FilterTypes.SHIRT}
+                onClick={() => handleChangeType(FilterType.SHIRT)} 
+                selected={type === FilterType.SHIRT}
             >
                 Camisetas
             </FilterItem>
 
             <FilterItem 
-                onClick={() => handleChangeType(FilterTypes.MUG)} 
-                selected={type === FilterTypes.MUG}
+                onClick={() => handleChangeType(FilterType.MUG)} 
+                selected={type === FilterType.MUG}
             >
                 Canecas
             </FilterItem>

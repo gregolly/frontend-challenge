@@ -17,7 +17,7 @@ const FilterContainer = styled.div`
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
-        color: ${({ theme }) => theme["text-dark"]};
+        color: ${({ theme }) => theme.colors["text-dark"]};
 
         display: flex;
         align-items: center;
@@ -40,7 +40,7 @@ const PriorityFilter = styled.ul`
     top: 100%;
 
     li {
-        color: ${({ theme }) => theme["text-dark"]};
+        color: ${({ theme }) => theme.colors["text-dark"]};
         font-size: 14px;
         line-height: 22px;
         cursor: pointer;

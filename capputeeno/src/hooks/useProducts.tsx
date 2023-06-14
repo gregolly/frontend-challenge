@@ -21,7 +21,9 @@ export function useProducts() {
     })
 
     const products = data?.data?.data?.allProducts
-    const filteredProducts = products?.filter(product => product.name.toLowerCase().includes(searchDeffered.toLowerCase()))
+    const filteredProducts = products?.filter(product => 
+        product.name.toLowerCase().includes(searchDeffered.toLowerCase())
+    )
 
     return {
         data: filteredProducts
