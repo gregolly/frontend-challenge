@@ -21,7 +21,7 @@ export const PrimaryInput = styled.input`
         font-family: inherit;
     }
 
-    @media (min-width: ${({ theme }) => theme.MediaQueryList.small}) {
+    @media (min-width: ${({ theme }) => theme.MediaQueryList.desktop}) {
         font-sizeL: 14px;
         line-height: 22px;
     }
@@ -38,7 +38,7 @@ const InputContainer = styled.div`
         transform: translateY(-50%);
     }
 
-    @media (min-width: ${({ theme }) => theme.MediaQueryList.small}) {
+    @media (min-width: ${({ theme }) => theme.MediaQueryList.desktop}) {
         width: 352px;
     }
 `

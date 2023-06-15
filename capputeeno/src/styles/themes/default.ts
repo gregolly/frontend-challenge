@@ -12,6 +12,7 @@ export const defaultTheme = {
         'shapes-light': '#F0F0F5'
     },
     MediaQueryList: {
-        small: '768px'
+        desktop: '1024px',
+        tablet: '768px'
     }
 } as const
