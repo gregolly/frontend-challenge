@@ -2,6 +2,7 @@ export const defaultTheme = {
     colors: {
         white: '#fff',
         alert: '#DE3838',
+        text: '#617480',
         'bg-secondary': "#F3F5F6",
         'text-dark': "#737380",
         'orange-low': '#FFA585',

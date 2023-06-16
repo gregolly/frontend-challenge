@@ -1,6 +1,6 @@
 "use client"
 
-import { styled, useTheme } from "styled-components";
+import { styled } from "styled-components";
 import { SearchIcon } from "./icons/SearchIcon";
 import { InputHTMLAttributes } from "react";
 

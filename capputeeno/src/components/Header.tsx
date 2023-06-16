@@ -36,12 +36,12 @@ const Logo = styled.a`
     font-size: 20px;
     line-height: 150%;
 
-    @media(min-width: ${({ theme }) => theme.MediaQueryList.desktop}) {
+    @media (min-width: ${({ theme }) => theme.MediaQueryList.desktop}) {
         font-size: 24px;
     }
 
-    @media(min-width: ${({ theme }) => theme.MediaQueryList.tablet}) {
-        font-size: 40px
+    @media (min-width: ${({ theme }) => theme.MediaQueryList.tablet}) {
+        font-size: 40px;
     }
 `
 
