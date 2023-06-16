@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 const CartCount = styled.span`
     width: 17px;
     height: 17px;
-    border-radius: 50%;
+    border-radius: 100%;
     padding: 5px;
     font-size: 10px;
     
