@@ -16,24 +16,4 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       }
     
       return { value, setValue, updateLocalStorage }
-
-    // const [value, setValue] = useState<T>(initialValue)
-
-    // const varWindow = window
-
-    // useEffect(() => {
-    //     if (typeof varWindow === 'undefined') return;
-    //     let storedValue = localStorage.getItem(key)
-    //     if (storedValue) setValue(JSON.parse(storedValue))
-    // }, [varWindow])
-
-    // function updateLocalStorage(newValue: T) {
-    //     setValue(newValue)
-    //     localStorage.setItem(key, JSON.stringify(newValue))
-    // }
-
-    // return {
-    //     value,
-    //     updateLocalStorage,
-    // }
 }
