@@ -110,6 +110,7 @@ export default function Products({ searchParams }: { searchParams: { id: string 
 
     function handleAddToCart() {
         let cartItems = localStorage.getItem('cart-items@caputeeno')
+        
         if(cartItems) {
             let cartItemsArray = JSON.parse(cartItems)
 
@@ -117,7 +118,7 @@ export default function Products({ searchParams }: { searchParams: { id: string 
             item.id === searchParams.id)
 
             if (existingProductIndex > -1) {
-                cartItemsArray[existingProductIndex] = existingProductIndex.quantity += 1;
+                cartItemsArray[existingProductIndex].quantity += 1;
             } else {
                 cartItemsArray.push({ ...data, quantity: 1, id: searchParams.id })
             }
