@@ -35,6 +35,7 @@ const Logo = styled.a`
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
+    text-decoration: none;
 
     @media (min-width: ${({ theme }) => theme.MediaQueryList.desktop}) {
         font-size: 24px;
@@ -49,7 +50,7 @@ export function Header() {
     const { search, setSearch } = useFilter()
     return (
         <TagHeader>
-            <Logo className={sairaStencilOne.className}>Capputeeno</Logo>
+            <Logo className={sairaStencilOne.className} href="/">Capputeeno</Logo>
             <div>
                 <PrimaryInputWithSearchIcon
                     value={search}
