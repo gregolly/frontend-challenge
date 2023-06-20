@@ -3,14 +3,14 @@ import { CartIcon } from "./icons/CartIcon";
 import { styled } from "styled-components";
 import { useRouter } from "next/navigation";
 
-const Container = styled.div`
+const Container = styled.button`
     position: relative;
     cursor: pointer;
     border: none;
     background: transparent;
 `
 
-const CartCount = styled.button`
+const CartCount = styled.div`
     width: 17px;
     height: 17px;
     border-radius: 100%;
