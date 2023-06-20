@@ -11,13 +11,13 @@ function fetcher(query: string): AxiosPromise<ProductsFetchResponse> {
     return axios.post(API_URL, { query })
 }
 
-export function useProducts() {
+export function useProducts(page: number, limit: number) {
     const { type, priority, search } = useFilter()
     const searchDeffered = useDeferredValue(search)
-    const query = mountQuery(type, priority)
+    const query = mountQuery(type, priority, page, limit)
     const { data } = useQuery({
         queryFn: () => fetcher(query),
-        queryKey: ['products', type, priority],
+        queryKey: ['products', type, priority, page],
         staleTime: 1000 * 60 * 1
     })
 

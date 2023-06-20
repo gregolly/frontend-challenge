@@ -12,7 +12,7 @@ export const defaultTheme = {
         'shapes-dark': '#09090A',
         'shapes-2': '#DCE2E6',
         'shapes-light': '#F0F0F5',
-        'border-color': '#A8A8B3'
+        'border-color': '#A8A8B3',
     },
     MediaQueryList: {
         desktop: '1024px',
